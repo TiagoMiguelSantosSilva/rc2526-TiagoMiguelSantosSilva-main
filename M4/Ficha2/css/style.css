@@ -1,0 +1,38 @@
+#tabela {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#horario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#horario td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#horario th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Tornar todos os cantos da tabela arredondados */
+
+td:hover {
+    background-color: #ecebb7;
+}
+
+thead tr:first-child th {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+tfoot tr:last-child th {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

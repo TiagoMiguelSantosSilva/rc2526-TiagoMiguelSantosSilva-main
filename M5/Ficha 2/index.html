@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 2</title>
+</head>
+
+<body>
+    <script>
+
+        // EXERCÍCIO 1
+
+        document.writeln("<h3>Exercício 1</h3>");
+
+        var nomes = new Array("Ana", "Maria", "Manuel", "Rodrigo", "Rui", "António", "Sara");
+
+        // Segundo elemento do array - é o índice 1
+        document.write("Segundo elemento do array: " + nomes[1] + "<br>");
+
+        // Tamanho do array - length()
+        document.write("Tamanho do array: " + nomes.length + "<br>");
+
+        var nomes2 = new Array("Henrique", "Gonçalo");
+
+        // Concatenar os arrays - concat()
+        var nomesConcatenados = nomes.concat(nomes2);
+        document.write("Array concatenado: " + nomesConcatenados.join(", ") + "<br>");
+
+        // Inserir um elemento no final do array - push()
+        nomesConcatenados.push("Beatriz");
+        document.write("Após inserir Beatriz no final: " + nomesConcatenados.join(", ") + "<br>");
+
+        // Inserir um elemento no início do array - unshift()
+        nomesConcatenados.unshift("Isabel");
+        document.write("Após inserir Isabel no início: " + nomesConcatenados.join(", ") + "<br>");
+
+        // Eliminar o último elemento do array - pop()
+        nomesConcatenados.pop();
+        document.write("Após eliminar o último elemento: " + nomesConcatenados.join(", ") + "<br>");
+
+        // Eliminar o primeiro elemento do array - shift()
+        nomesConcatenados.shift();
+        document.write("Após eliminar o primeiro elemento: " + nomesConcatenados.join(", ") + "<br>");
+
+        // Imprimir um elemento aleatório do array - gerar um índice aleatório
+        var elementoAleatorio = Math.floor(Math.random() * nomesConcatenados.length);
+        document.write("Elemento aleatório do array: " + nomesConcatenados[elementoAleatorio] + "<br>");
+
+        // Remover dois elementos a partir de um índice específico - splice()
+        var nomesEliminados = nomesConcatenados.splice(3, 2);
+        document.write("Elementos eliminados a partir do índice 3: " + nomesEliminados.join(", ") + "<br>");
+        document.write("Elementos restantes no array: " + nomesConcatenados.join(", ") + "<br>");
+
+
+        // EXERCÍCIO 2
+
+        document.writeln("<h3>Exercício 2</h3>");
+
+        var frase = new String("Curso Profissional de Gestão e Programação de Sistemas informáticos");
+
+        // Caracter da sexta posição
+        document.write("Caracter da sexta posição: " + frase.charAt(6));
+
+        // Índice da primeira ocorrência do caracter 'r'
+        document.write("<br>Índice da primeira ocorrência de 'r': " + frase.indexOf('r'));
+
+        // Índice da última ocorrência do caracter 'r'
+        document.write("<br>Índice da última ocorrência de 'r': " + frase.lastIndexOf('r'));
+
+        // Caracteres em maiúsculo
+        document.write("<br>Caracteres em maiúsculo: " + frase.toUpperCase());
+
+        // Caracteres em minúsculo
+        document.write("<br>Caracteres em minúsculo: " + frase.toLowerCase());
+
+        // Remover a palavra profissional da frase
+        document.write("<br>Frase depois de retirar 'profissional': " + frase.replace("Profissional", ""));
+
+
+        // EXERCÍCIO 3
+
+        document.writeln("<h3>Exercício 3</h3>");
+
+        var data = new Date;
+
+        // Data e hora completa
+        document.write("Data e hora completa: " + data.toLocaleString());
+
+        // Dia 
+        document.write("<br>Dia: " + data.getDate());
+
+        // Mês em extenso 
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        document.write("<br>Mês: " + meses[data.getMonth()]);
+
+        // Dia da semana em extenso
+        var meses = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
+        document.write("<br>Dia da semana: " + meses[data.getDay()]);
+
+        // Hora e minutos
+        document.write("<br>Horas e minutos: " + data.getHours() + ":" + data.getMinutes());
+
+
+        // EXERCÍCIO 3
+
+        document.writeln("<h3>Exercício 3</h3>");
+
+        var x = Number(3.445), y = Number(25), z = Number(-31);
+
+        // Valor absoluto da variável z
+        document.write("Valor absoluto de z: " + Math.abs(z));
+
+        // O menor valor inteiro acima do valor da variável x
+        document.write("<br>Menor valor inteiro acima do valor de x: " + Math.ceil(x));
+
+        // O maior valor inteiro abaixo do valor da variável x
+        document.write("<br>Menor valor inteiro acima do valor de x: " + Math.floor(x));
+
+        // Quadrado da variável y
+        document.write("<br>Quadrado de y: " + Math.pow(y, 2));
+
+        // Raíz quadrada da variável y
+        document.write("<br>Raíz quadrada de y: " + Math.sqrt(y));
+
+        // Número aleatório entre 10 e 20
+        document.write("<br>Número aleatório entre 10 e 20: " + (Math.random() * (20 - 10) + 10).toFixed(0));
+
+        // Arredondar o valor da variável x com duas casas decimais
+        document.write("<br>X arredondado com duas casas decimais: " + Math.round(x * 100) / 100);
+
+    </script>
+</body>
+
+</html>

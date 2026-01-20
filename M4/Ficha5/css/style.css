@@ -1,0 +1,26 @@
+#container {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#imagem {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#imagem img {
+    width: 300px;
+    height: 300px;
+}
+
+#descricao {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    padding-right: 30px;
+}
+
+#raspberry {
+    border-style: solid;
+}

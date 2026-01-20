@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 1</title>
+</head>
+
+<body>
+    <script>
+        var nome = prompt("Indique o seu nome: ");
+        var disciplina = prompt("Indique a disciplina ");
+        var nota1 = parseFloat(prompt("Indique a primeira nota: "));
+        var nota2 = parseFloat(prompt("Indique a segunda nota: "));
+        var nota3 = parseFloat(prompt("Indique a terceira nota: "));
+
+        var media = (nota1 + nota2 + nota3) / 3;
+
+        if (media >= 9.5) {
+            document.write("O(a) aluno(a) " + nome + ", à disciplina " + disciplina + ", obteve de média final " + Math.round(media) + " e classificação de Aprovado.");
+        } else {
+            document.write("O(a) aluno(a) " + nome + ", à disciplina " + disciplina + ", obteve de média final " + Math.round(media) + " e classificação de Reprovado.");
+        }
+
+        var letra = prompt("Indique uma letra: ").toLowerCase();
+
+        switch (letra) {
+            case 'a':
+                document.write("<br><br>A letra " + letra + " é uma vogal.");
+                break;
+            case 'e':
+                document.write("<br><br>A letra " + letra + " é uma vogal.");
+                break;
+            case 'i':
+                document.write("<br><br>A letra " + letra + " é uma vogal.");
+                break;
+            case 'o':
+                document.write("<br><br>A letra " + letra + " é uma vogal.");
+                break;
+            case 'u':
+                document.write("<br><br>A letra " + letra + " é uma vogal.");
+                break;
+            default:
+                document.write("<br><br>A letra " + letra + " é uma consoante.");
+                break;
+        }
+
+        var numeros = new Array();
+
+        for (let i = 0; i < 5; i++) {
+            numeros[i] = Math.floor(Math.random() * 50) + 1;
+
+            if (numeros[i].length > 1) {
+                if (numeros[i] == numeros[i - 1]) {
+                    i--;
+                }
+            }
+        }
+
+        var estrelas = new Array();
+
+        for (let i = 0; i < 2; i++) {
+            estrelas[i] = Math.floor(Math.random() * 12) + 1;
+
+            if (estrelas[i].length > 1) {
+                if (estrelas[i] == estrelas[i - 1]) {
+                    i--;
+                }
+            }
+        }
+
+        document.write("<br><br>Chave do Euromilhões: Números [" + numeros.join(", ") + "] e Estrelas [" + estrelas.join(", ") + "]");
+
+        var numero = parseInt(prompt("Indique um número inteiro: "));
+
+        for (let i = 1; i <= 10; i++) {
+            document.write("<br>" + numero + " x " + i + " = " + (numero * i) + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

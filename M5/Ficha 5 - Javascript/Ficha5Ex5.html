@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ficha 5 - Exercício 2</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <br />
+    <div class="form-group row">
+      <label for="txtArray" class="col-2 col-form-label">Array:</label>
+      <div class="col-6">
+        <input type="text" class="form-control" id="txtArray" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-2 col-3">
+        <input type="button" class="btn btn-primary" value="Remover Valores Repetidos" id="btnRemoverRepetidos"
+          onclick="removerRepetidos()" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="txtArrayMod" class="col-2 col-form-label">Novo Array:</label>
+      <div class="col-6">
+        <input type="text" class="form-control" id="txtArrayMod" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label id="lblValida" class="offset-2 col-3 col-form-label"></label>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

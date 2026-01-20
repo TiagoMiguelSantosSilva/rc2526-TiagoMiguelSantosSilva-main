@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos JavaScript</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        // Permite escrever texto no document HTML
+        document.write("<h1>Olá Mundo!</h1>");
+        // Escrever código na consola do navegador
+        console.log("Olá Mundo!");
+
+        // Variáveis
+        var nome = "João"; // Variável global
+        let idade = 30; // Variável de bloco
+        document.write("Olá, " + nome + "!<br>");
+        document.write("Você tem " + idade + " anos.");
+
+        var a = 15;
+        document.write("<br><br>O valor de a é: " + a);
+        document.write("<br>Tipo - " + typeof (a)); // Retorna o tipo da variável
+
+        a = "AERP";
+        document.write("<br><br>O valor de a é: " + a);
+        document.write("<br>Tipo - " + typeof (a)); // Retorna o tipo da variável   
+        /*
+        // Caixa de alerta
+        alert("Bem-vindo!");
+
+        // Prompt
+        var cidade = prompt("Qual é a sua cidade?");
+        document.write("<br><br>Você mora em " + cidade + ".");
+
+        // Confirmação
+        if (confirm("Você gosta de programação?")) {
+            document.write("<br>Que bom que você gosta de programação!");
+        } else {
+            document.write("<br>Que pena que você não gosta de programação.");
+        }
+        */
+        // Concatenação
+        var b = 10, c = 23;
+        document.write("<br><br>A soma de " + b + " + " + c + " é: " + b + c + "."); // Errado: 10 + 23 = 1023
+        document.write("<br>A soma de " + b + " + " + c + " é: " + (b + c) + "."); // Correto: 10 + 23 = 33
+        document.write("<br>A soma de ", b, " + ", c, " é: ", b + c, "."); // Correto: 10 + 23 = 33
+
+        // Estruturas condicionais
+
+        // If
+        var data = new Date(); // Obter a data atual
+        var hora = data.getHours(); // Obter a hora atual
+        var minutos = data.getMinutes(); // Obter os minutos atuais
+
+        if (hora < 12) {
+            document.write("<br><br><h2>Bom dia! São " + hora + " horas e " + minutos + " minutos.</h2 >");
+        } else if (hora < 18) {
+            document.write("<br><br><h2>Boa tarde! São " + hora + " horas e " + minutos + " minutos.</h2 >");
+        } else {
+            document.write("<br><br><h2>Boa noite! São " + hora + " horas e " + minutos + " minutos.</h2 >");
+        }
+
+        // Switch com números aleatórios
+        var idade2 = Math.floor(Math.random() * 99) + 1; // Número aleatório (inteiro) entre 0 e 99
+        document.write("<br>Idade: " + idade2);
+
+        switch (true) {
+            case idade >= 1 && idade2 <= 3:
+                document.write("<br>Você é um bebé.");
+                break;
+            case idade2 >= 4 && idade2 <= 12:
+                document.write("<br>Você é uma criança.");
+                break;
+            case idade2 >= 12 && idade2 <= 17:
+                document.write("<br>Você é um adolescente.");
+                break;
+            case idade2 >= 18 && idade2 <= 64:
+                document.write("<br>Você é um adulto.");
+                break;
+            case idade2 >= 65:
+                document.write("<br>Você é um idoso.");
+                break;
+            default:
+                document.write("<br>Idade inválida.");
+        }
+
+        // Switch com números fixos
+        var dia = data.getDay(); // Obter o dia da semana (0-6)
+
+        switch (dia) {
+            case 0:
+                document.write("<br><br>Hoje é Domingo.");
+                break;
+            case 1:
+                document.write("<br><br>Hoje é Segunda-feira.");
+                break;
+            case 2:
+                document.write("<br><br>Hoje é Terça-feira.");
+                break;
+            case 3:
+                document.write("<br><br>Hoje é Quarta-feira.");
+                break;
+            case 4:
+                document.write("<br><br>Hoje é Quinta-feira.");
+                break;
+            case 5:
+                document.write("<br><br>Hoje é Sexta-feira.");
+                break;
+            case 6:
+                document.write("<br><br>Hoje é Sábado.");
+                break;
+            default:
+                document.write("<br><br>Dia inválido.");
+        }
+
+        //Estruturas de repetição
+
+        // For
+        document.write("<br><br>Valor de i:");
+        for (let i = 0; i < 5; i++) {
+            document.write(" " + i); // Imprime valores de 0 a 4
+        }
+
+        //Foreach
+        let numeros = Array.from({ length: 40 }, () => Math.floor(Math.random() * 99) + 1); // Array com 40 números aleatórios entre 0 e 99
+
+        document.write("<br><br>");
+
+        numeros.forEach(num => {
+            if (num % 5 === 0) { // Verifica se o número é divisível por 5
+                document.write(num + " ");
+            }
+        })
+
+        document.write("<br><br>");
+
+        //Do while
+        do {
+            var numAleatorio = Math.floor(Math.random() * 99) + 1; // Número aleatório entre 1 e 50
+            document.write("*");
+        } while (numAleatorio != 25); // Escrever asteriscos até sair o número 25
+
+        document.write("<br><br>");
+
+        //Piramide numérica
+        var i = 1;
+        while (i != 6) {
+            for (var i = 1; i <= 5; i++) {
+                // Espaços para alinhar à direita
+                for (var s = 0; s < 5 - i; s++) {
+                    document.write("&nbsp;&nbsp;");
+                }
+                // Parte decrescente
+                for (var j = i; j >= 1; j--) {
+                    document.write(j);
+                }
+                // Parte crescente
+                for (var j = 2; j <= i; j++) {
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+
+        //If inline
+        idade = Math.floor(Math.random() * 99) + 1;
+        var res = (idade < 18) ? "Menor de idade" : "Maior de idade";
+        document.write("<br>Idade: " + idade + " - " + res);
+
+    </script>
+</body>
+
+</html>

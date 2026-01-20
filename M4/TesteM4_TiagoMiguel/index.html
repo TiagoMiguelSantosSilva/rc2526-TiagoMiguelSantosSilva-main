@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMULADOR DE APOSTAS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <h1 class="text-primary">SIMULADOR DE APOSTAS</h1>
+
+            <div class="row my-4">
+                <div class="col-6">
+                    <img src="img/bet.jpg" alt="bet bet bet PERDE A GITA TODAAAAAAA HAHAHAA">
+                </div>
+                <div class="col-4">
+                    <ol>
+                        <li> Escolha a competição</li>
+                        <li> Selecione as quotas</li>
+                        <li> Verifique se escolheu uma aposta simples ou multipla</li>
+                        <li> Verifique qual o total a pagar</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-5">
+                    <l class="text-danger">TIPO APOSTA</l>
+                </div>
+                <div class="col-2">
+                    <l class="text-warning">COMPETIÇÃO</l>
+                </div>
+                <div class="col-5">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Selecione uma competição</option>
+                        <option value="1">Portugal - Liga NOS</option>
+                        <option value="2">Espanha - La Liga</option>
+                        <option value="3">Inglaterra - La Liga</option>
+                        <option value="4">Itália - Serie A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Aposta Simples</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Aposta múltipla</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row my-2">
+                        <p>Braga-Tondela</p>
+                    </div>
+                    <div class="row my-2">
+                        <p>E.Amadora - Estoril</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row my-2">
+                        vermalho 2.10 azul 3.10 verde 3.30
+                    </div>
+                    <div class="row my-2">
+                        azul 2.10 amarelo 3.10 cincento 3.30
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col-1">
+                    <l class="text-success">TOTAL</l>
+                </div>
+                <div class="col-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">€</span>
+                        <input type="text" class="form-control" placeholder="" aria-label="TOTAL"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+
+</html>

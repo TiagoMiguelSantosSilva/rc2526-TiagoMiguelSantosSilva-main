@@ -1,0 +1,46 @@
+#imagem {
+    width: 35%;
+    float: left;
+}
+
+.esquerda .galeria {
+    text-align: left;
+    margin-left: 5%;
+}
+
+#informacoesAdicionais {
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+}
+
+#desconto h3 {
+    align-items: center;
+    display: inline-block;
+    background-color: rgb(163, 0, 0, 2);
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+#botaoComprar table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#botaoComprar table td {
+    padding: 0 5px;
+}
+
+#botaoComprar table input {
+    width: 50px;
+    text-align: center;
+}
+
+#botaoComprar button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
